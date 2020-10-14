@@ -14,7 +14,9 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        //
+        $beritas = Berita::all(); //select*from berita
+        
+        return view('berita.index',compact('beritas'));
     }
 
     /**
