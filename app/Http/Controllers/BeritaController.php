@@ -26,7 +26,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        //
+        return view('berita.create');
     }
 
     /**
@@ -37,7 +37,11 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input=$request->all();
+
+        Berita::create($input); ///insert into
+
+        return redirect()->route('berita.index');
     }
 
     /**

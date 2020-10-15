@@ -22,3 +22,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/berita', 'App\Http\Controllers\BeritaController@index')->name('berita.index');
+
+Route::get('/berita/create', [App\Http\Controllers\BeritaController::class, 'create'])->name('berita.create');
+
+Route::post('/berita', [App\Http\Controllers\BeritaController::class, 'store'])->name('berita.store');
