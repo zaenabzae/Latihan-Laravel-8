@@ -13,7 +13,9 @@
             <td>{{ $loop->iteration }}</td>
             <td>{{ $item->judul }}</td>
             <td>{{ $item->isi }}</td>
-            <td></td>
+            <td>
+                <a href="{{ route('berita.show', $item->id) }}" class="btn btn-success">Tampil</a>
+            </td>
         </tr>
         @endforeach
     </tbody>

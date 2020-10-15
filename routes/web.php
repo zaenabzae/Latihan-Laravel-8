@@ -26,3 +26,5 @@ Route::get('/berita', 'App\Http\Controllers\BeritaController@index')->name('beri
 Route::get('/berita/create', [App\Http\Controllers\BeritaController::class, 'create'])->name('berita.create');
 
 Route::post('/berita', [App\Http\Controllers\BeritaController::class, 'store'])->name('berita.store');
+
+Route::get('/berita/{id}', [App\Http\Controllers\BeritaController::class, 'show'])->name('berita.show');

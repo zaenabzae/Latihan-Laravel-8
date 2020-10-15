@@ -50,9 +50,10 @@ class BeritaController extends Controller
      * @param  \App\Models\Berita  $berita
      * @return \Illuminate\Http\Response
      */
-    public function show(Berita $berita)
+    public function show($id)
     {
-        //
+        $berita = Berita::find($id);
+        return view('berita.show', compact('berita'));
     }
 
     /**
